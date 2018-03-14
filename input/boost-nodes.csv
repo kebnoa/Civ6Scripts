@@ -1,0 +1,140 @@
+Node,Name,EstCost,Type,EraType,Category,Description
+BOOST_CIVIC_FOREIGN_TRADE,New continent discovered,0,P,ERA_ANCIENT,Boost,Model as 50% likelyhood
+BOOST_TECH_ARCHERY,Slinger kill made,0,P,ERA_ANCIENT,Boost,"Need at least one, usually more than one"
+BOOST_TECH_ASTROLOGY,Natural wonder found,0,P,ERA_ANCIENT,Boost,"Est. cost of 1 scout, model as 50% of scout"
+BOOST_TECH_WRITING,Civ met,0,P,ERA_ANCIENT,Boost,"Est. cost of 1 scout, model as 50% of scout"
+RESOURCE_IRON,Iron revealed,0,P,ERA_ANCIENT,Boost,
+BOOST_TECH_IRRIGATION,Resource farmed,20,P,ERA_ANCIENT,Boost,Est. 5 builders needed for all boosts at cost of ~300P so 20P per charge
+BOOST_TECH_MASONRY,Quarry mined,20,P,ERA_ANCIENT,Boost,Est. 5 builders needed for all boosts at cost of ~300P so 20P per charge
+BOOST_TECH_THE_WHEEL,Hill mined,20,P,ERA_ANCIENT,Boost,Est. 5 builders needed for all boosts at cost of ~300P so 20P per charge
+BOOST_CIVIC_MYSTICISM,Pantheon created,25,Fa,ERA_ANCIENT,Boost,Est. based on faith needed to get a pantheon
+UNIT_SCOUT,Scout built,30,P,ERA_ANCIENT,Boost,
+UNIT_SLINGER,Slinger built,35,P,ERA_ANCIENT,Boost,
+UNIT_TRADER,Trader built,40,P,ERA_ANCIENT,Boost,
+BOOST_CIVIC_STATE_WORKFORCE,District built,54,P,ERA_ANCIENT,Boost,Est. based on base costs
+BOOST_CIVIC_CRAFTSMANSHIP,3 Tiles improved,60,P,ERA_ANCIENT,Boost,Est. 5 builders needed for all boosts at cost of ~300P so 20P per charge
+UNIT_SPEARMAN,Spearman built,65,P,ERA_ANCIENT,Boost,
+BOOST_CIVIC_EARLY_EMPIRE,6 pop reached,80,F,ERA_ANCIENT,Boost,Est. cost of getting to 6 population (15+8*n+n^1.5)
+BOOST_CIVIC_MILITARY_TRADITION,Barb camp cleared,80,P,ERA_ANCIENT,Boost,Assume 2 warriors needed? this is pre-requisite to MERCENARIES boost?
+BOOST_TECH_BRONZE_WORKING,3 Barbs killed,80,P,ERA_ANCIENT,Boost,Model as 2 warriors needed
+BOOST_TECH_SAILING,Settled on coast,80,P,ERA_ANCIENT,Boost,Model as the cost of 1 settler
+BOOST_CIVIC_COLD_WAR,Nuclear Fission researched,0,GPP,ERA_ATOMIC,Boost,TBD
+BOOST_CIVIC_CULTURAL_HERITAGE,1 Themed Museum made,0,P,ERA_ATOMIC,Boost,TBD
+BOOST_TECH_COMPUTERS,Gov with 8 policy slots,0,P,ERA_ATOMIC,Boost,"Suffrage, Totalitarianism, or Class Striggle, model on Suffrage"
+RESOURCE_URANIUM,Uranium revealed,0,P,ERA_ATOMIC,Boost,
+BOOST_TECH_PLASTICS,Oil Well built,20,P,ERA_ATOMIC,Boost,Est. 5 builders needed for all boosts at cost of ~300P so 20P per charge
+BOOST_TECH_SYNTHETIC_MATERIALS,2 Aerodromes built,108,P,ERA_ATOMIC,Boost,Est. cost of 2 (all pre-requites?)
+BOOST_TECH_COMBINED_ARMS,Airstrip improved,170,P,ERA_ATOMIC,Boost,Est. cost of a Military Engineer (all pre-requisites
+BOOST_CIVIC_PROFESSIONAL_SPORTS,4 ECs built,216,P,ERA_ATOMIC,Boost,Est. cost of 4 (all pre-requisites?)
+UNIT_FIGHTER,Fighter built,520,P,ERA_ATOMIC,Boost,
+BOOST_TECH_ADVANCED_BALLISTICS,2 Powerplants built,580,P,ERA_ATOMIC,Boost,Cost already partially covered by previous nodes in chain
+BOOST_CIVIC_RAPID_DEPLOYMENT,Airstrip on foreign continent built,600,P,ERA_ATOMIC,Boost,
+BOOST_TECH_NUCLEAR_FISSION,Great scientist or spy used,999,GPP,ERA_ATOMIC,Boost,Great Scientist or Spy?
+BOOST_TECH_ROCKETRY,Great scientist or spy used,999,GPP,ERA_ATOMIC,Boost,Great Scientist or Spy?
+BOOST_TECH_ADVANCED_FLIGHT,3 Biplanes built,1290,P,ERA_ATOMIC,Boost,Est. cost of 3 (all pre-requisites?)
+BOOST_CIVIC_SPACE_RACE,Spaceport built,1800,P,ERA_ATOMIC,Boost,Est. cost of 1 (all pre-requisites?)
+BOOST_CIVIC_DEFENSIVE_TACTICS,DoW received,0,P,ERA_CLASSICAL,Boost,Model as 50% likelyhood
+BOOST_CIVIC_GAMES_RECREATION,Construction researched,0,S,ERA_CLASSICAL,Boost,TBD
+BOOST_CIVIC_MILITARY_TRAINING,Encampment built,0,P,ERA_CLASSICAL,Boost,Already covered in chain
+BOOST_CIVIC_POLITICAL_PHILOSOPHY,3 City states found,0,P,ERA_CLASSICAL,Boost,Model as 50% likelyhood
+BOOST_TECH_CONSTRUCTION,Water Mill built,0,P,ERA_CLASSICAL,Boost,Cost already covered by previous nodes in chain
+BOOST_TECH_CURRENCY,Trade Route completed,0,P,ERA_CLASSICAL,Boost,Cost already partially covered by previous nodes in chain
+BOOST_TECH_ENGINEERING,Ancient Walls built,0,P,ERA_CLASSICAL,Boost,Cost already covered by previous nodes in chain
+BOOST_TECH_CELESTIAL_NAVIGATION,Fishing boat built,20,P,ERA_CLASSICAL,Boost,Est. 5 builders needed for all boosts at cost of ~300P so 20P per charge
+BOOST_TECH_HORSEBACK_RIDING,Pasture made,20,P,ERA_CLASSICAL,Boost,Est. 5 builders needed for all boosts at cost of ~300P so 20P per charge
+BOOST_TECH_IRON_WORKING,Iron mined,20,P,ERA_CLASSICAL,Boost,Est. 5 builders needed for all boosts at cost of ~300P so 20P per charge
+BOOST_CIVIC_RECORDED_HISTORY,2n Campus built,54,P,ERA_CLASSICAL,Boost,Cost already partially covered by previous nodes in chain
+BOOST_CIVIC_THEOLOGY,Religion found,60,GPrP,ERA_CLASSICAL,Boost,Need a great prophet and at least a shrine
+UNIT_QUADRIREME,Quadrireme built,120,P,ERA_CLASSICAL,Boost,
+BOOST_TECH_SHIPBUILDING,2 Galleys owned,130,P,ERA_CLASSICAL,Boost,Need 2 Galleys
+BOOST_TECH_MATHEMATICS,3 Districts built,162,P,ERA_CLASSICAL,Boost,Model as 3x Districts
+BOOST_CIVIC_DRAMA_POETRY,Wonder built,400,P,ERA_CLASSICAL,Boost,Est. cost of Colosseum as an example
+BOOST_CIVIC_COLONIALISM,Astronomy researched,0,S,ERA_INDUSTRIAL,Boost,TBD
+BOOST_CIVIC_NATIONALISM,DoW using Casus Belli made,0,P,ERA_INDUSTRIAL,Boost,Model as 50% likelyhood
+BOOST_CIVIC_NATURAL_HISTORY,Archeology museum built,0,P,ERA_INDUSTRIAL,Boost,Cost already covered by previous nodes in chain
+BOOST_CIVIC_OPERA_BALLET,Art museum built,0,P,ERA_INDUSTRIAL,Boost,Cost already covered by previous nodes in chain
+BOOST_TECH_MILITARY_SCIENCE,Knight kill made,0,P,ERA_INDUSTRIAL,Boost,Cost already covered by previous nodes in chain
+BOOST_TECH_SCIENTIFIC_THEORY,The Enlightenment culturvated,0,P,ERA_INDUSTRIAL,Boost,TBD
+RESOURCE_ANTIQUITY_SITE,Antiquities revealed,0,P,ERA_INDUSTRIAL,Boost,
+RESOURCE_COAL,Coal revealed,0,P,ERA_INDUSTRIAL,Boost,
+BOOST_TECH_RIFLING,Niter mined,20,P,ERA_INDUSTRIAL,Boost,Est. 5 builders needed for all boosts at cost of ~300P so 20P per charge
+BOOST_TECH_BALLISTICS,2 Forts built,40,P,ERA_INDUSTRIAL,Boost,Est. cost of a 3rd of a builder (x2)
+BOOST_TECH_SANITATION,2 Neighbourhoods built,108,P,ERA_INDUSTRIAL,Boost,Est. cost of 2 (all pre-requites?)
+BOOST_CIVIC_URBANIZATION,15 pop in city reached,195,F,ERA_INDUSTRIAL,Boost,Estimated cost of getting to 15 population (15+8*n+n^1.5)
+UNIT_FIELD_CANNON,Field Cannon built,330,P,ERA_INDUSTRIAL,Boost,
+BOOST_CIVIC_CIVIL_ENGINEERING,7 Districts built,378,P,ERA_INDUSTRIAL,Boost,Model as 7 districts @ 54P each
+UNIT_IRONCLAD,Ironclad built,380,P,ERA_INDUSTRIAL,Boost,
+BOOST_TECH_INDUSTRIALIZATION,3 Workshops built,390,P,ERA_INDUSTRIAL,Boost,Cost already partially covered by previous nodes in chain
+UNIT_ARCHAEOLOGIST,Archaeologist recruited,400,P,ERA_INDUSTRIAL,Boost,
+BOOST_TECH_ECONOMICS,2nd Bank built,410,P,ERA_INDUSTRIAL,Boost,Cost already partially covered by previous nodes in chain
+BOOST_TECH_STEAM_POWER,2nd Shipyard built,410,P,ERA_INDUSTRIAL,Boost,1 already covered by chain. 410 is Lighthouse & Shipyard
+BOOST_CIVIC_SCORCHED_EARTH,2 Field cannons owned,660,P,ERA_INDUSTRIAL,Boost,Need 2 field cannons
+BOOST_CIVIC_SOCIAL_MEDIA,Telecoms researched,0,P,ERA_INFORMATION,Boost,TBD
+BOOST_TECH_ROBOTICS,Globalization culturvated,0,p,ERA_INFORMATION,Boost,TBD
+BOOST_TECH_NANOTECHNOLOGY,Aliminium mined,20,P,ERA_INFORMATION,Boost,Est. 5 builders needed for all boosts at cost of ~300P so 20P per charge
+BOOST_TECH_COMPOSITES,3 Tanks owned,480,P,ERA_INFORMATION,Boost,Est. cost of 3 (all pre-requisites?)
+BOOST_TECH_GUIDANCE_SYSTEMS,1 Fighter jet built,520,P,ERA_INFORMATION,Boost,Est. cost of 1 (all pre-requisites?)
+BOOST_TECH_TELECOMMUNICATIONS,2 Broadcast Centers built,870,P,ERA_INFORMATION,Boost,Cost already partially covered by previous nodes in chain
+BOOST_TECH_LASERS,Great scientist or spy used,999,GPP,ERA_INFORMATION,Boost,Great Scientist or Spy?
+BOOST_TECH_NUCLEAR_FUSION,Great scientist or spy used,999,GPP,ERA_INFORMATION,Boost,Great Scientist or Spy?
+BOOST_TECH_SATELLITES,Great scientist or spy used,999,GPP,ERA_INFORMATION,Boost,Great Scientist or Spy?
+BOOST_TECH_STEALTH_TECHNOLOGY,Great scientist or spy used,999,GPP,ERA_INFORMATION,Boost,Great Scientist or Spy?
+BOOST_CIVIC_GLOBALIZATION,3 Airstrips built,1800,P,ERA_INFORMATION,Boost,Est. cost of 3 (all pre-requisites?)
+BOOST_CIVIC_NAVAL_TRADITION,Quadrimeme kill made,0,P,ERA_MEDIEVAL,Boost,Already covered in chain
+BOOST_TECH_CASTLES,Gov with 6 policy slots,0,P,ERA_MEDIEVAL,Boost,Divine Right or Exploration or Reformed Church  - Model on Exploration
+BOOST_TECH_MILITARY_ENGINEERING,Aqueduct built,0,P,ERA_MEDIEVAL,Boost,Cost already covered by previous nodes in chain
+BOOST_TECH_MILITARY_TACTICS,Spearman kill made,0,P,ERA_MEDIEVAL,Boost,Cost already covered by previous nodes in chain
+BOOST_TECH_STIRRUPS,Feudalism culturvated,0,P,ERA_MEDIEVAL,Boost,TBD
+RESOURCE_NITER,Niter revealed,0,P,ERA_MEDIEVAL,Boost,
+IMPROVEMENT_LUMBER_MILL,Can build Lumber Mill,20,P,ERA_MEDIEVAL,Boost,Est. 5 builders needed for all boosts at cost of ~300P so 20P per charge
+BOOST_TECH_APPRENTICESHIP,3 Mines built,60,P,ERA_MEDIEVAL,Boost,Est. 5 builders needed for all boosts at cost of ~300P so 20P per charge
+BOOST_TECH_EDUCATION,Great scientist recruited,60,GSP,ERA_MEDIEVAL,Boost,
+BOOST_CIVIC_DIVINE_RIGHT,Temple built,120,P,ERA_MEDIEVAL,Boost,Need 1
+BOOST_CIVIC_FEUDALISM,6 Farms built,120,P,ERA_MEDIEVAL,Boost,Est. 5 builders needed for all boosts at cost of ~300P so 20P per charge
+BOOST_CIVIC_GUILDS,2 markets built,120,P,ERA_MEDIEVAL,Boost,"Need 2 markets, assume 1 already covered by Currency?"
+BOOST_CIVIC_CIVIL_SERVICE,10 pop in city reached,130,F,ERA_MEDIEVAL,Boost,Estimated cost of getting to 10 population (15+8*n+n^1.5)
+UNIT_MILITARY_ENGINEER,Military Engineer,170,P,ERA_MEDIEVAL,Boost,
+BOOST_TECH_MACHINERY,3 Archers owned,180,P,ERA_MEDIEVAL,Boost,Est. cost of 3 (all pre-requisites?)
+UNIT_CROSSBOWMAN,Crossbowman built,180,P,ERA_MEDIEVAL,Boost,
+UNIT_KNIGHT,Knight built,180,P,ERA_MEDIEVAL,Boost,
+BOOST_CIVIC_MERCENARIES,8 land units owned,240,P,ERA_MEDIEVAL,Boost,"Assume 8 warrior, of which 2 were built to clear barbarian camp"
+BOOST_CIVIC_MEDIEVAL_FAIRES,4 trade routes made,360,P,ERA_MEDIEVAL,Boost,"Need 4 traders, and 4 markets. Assume 2 market for Guilds Boost, and 1 trader for currency"
+BOOST_CIVIC_MASS_MEDIA,Radio researched,0,P,ERA_MODERN,Boost,TBD
+BOOST_CIVIC_MOBILIZATION,3 Corps owned,0,P,ERA_MODERN,Boost,Cost already covered by previous nodes in chain
+BOOST_TECH_CHEMISTRY,Level 2 alliance made,0,P,ERA_MODERN,Boost,TBD
+BOOST_TECH_COMBUSTION,Artifact extracted,0,P,ERA_MODERN,Boost,Cost already covered by previous nodes in chain
+BOOST_TECH_RADIO,National Park created,0,Fa,ERA_MODERN,Boost,Cost already covered by previous nodes in chain
+BOOST_TECH_STEEL,Iron mined and Ironclad owned,0,P,ERA_MODERN,Boost,Cost already covered by previous nodes in chain
+IMPROVEMENT_AIRSTRIP,Can improve airstrip,0,P,ERA_MODERN,Boost,
+RESOURCE_ALUMINUM,Aluminium revealed,0,P,ERA_MODERN,Boost,
+RESOURCE_OIL,Oil revealed,0,P,ERA_MODERN,Boost,
+BOOST_CIVIC_CONSERVATION,4 Neighbourhoods built,108,P,ERA_MODERN,Boost,Cost already partially covered by previous nodes in chain
+UNIT_BIPLANE,Biplane built,430,P,ERA_MODERN,Boost,
+BOOST_TECH_REPLACEABLE_PARTS,3 Musketman owned,480,P,ERA_MODERN,Boost,"Need 3, assume one already accounted for in Square Rigging"
+UNIT_TANK,Tank built,480,P,ERA_MODERN,Boost,
+BOOST_CIVIC_NUCLEAR_PROGRAM,Research Lab built,580,P,ERA_MODERN,Boost,Est. cost of 1 (all pre-requisites?)
+BOOST_CIVIC_SUFFRAGE,4 Sewers built,600,P,ERA_MODERN,Boost,Cost already partially covered by previous nodes in chain
+BOOST_CIVIC_CLASS_STRUGGLE,3 Factories built,780,P,ERA_MODERN,Boost,Cost already partially covered by previous nodes in chain
+BOOST_TECH_ELECTRICITY,3 Privateers built,840,P,ERA_MODERN,Boost,Est. cost of 3 (all pre-requisites?)
+BOOST_CIVIC_TOTALITARIANISM,3 Military Academies built,1070,P,ERA_MODERN,Boost,"Mil Academy needs an armory so 585 for 1, and 1 already built."
+BOOST_TECH_FLIGHT,Industrial era wonder built,1240,P,ERA_MODERN,Boost,Est. cost of Rhur Valey as an example
+BOOST_CIVIC_CAPITALISM,3 Stock exchanges built,1400,P,ERA_MODERN,Boost,Cost of 1 Stock Exhange covered in path. 700 = SE and pre-requisites
+UNIT_NATURALIST,Naturalist recruited,1600,Fa,ERA_MODERN,Boost,
+BOOST_CIVIC_DIPLOMATIC_SERVICE,Alliance made,0,P,ERA_RENAISSANCE,Boost,Model as 50% likelyhood
+BOOST_CIVIC_REFORMED_CHURCH,6 cities follow your religion,0,P,ERA_RENAISSANCE,Boost,TBD
+BOOST_CIVIC_THE_ENLIGHTENMENT,3 Great people recruited,0,GPP,ERA_RENAISSANCE,Boost,Covered by other GP related efforts.
+BOOST_TECH_ASTRONOMY,Uni built next to mountain,0,P,ERA_RENAISSANCE,Boost,Cost already covered by previous nodes in chain
+BOOST_TECH_BANKING,Guilds  culturvated,0,P,ERA_RENAISSANCE,Boost,TBD
+BOOST_TECH_SQUARE_RIGGING,Musketman kill made,0,P,ERA_RENAISSANCE,Boost,Cost already covered by previous nodes in chain
+IMPROVEMENT_FORT,Can build Fort,0,P,ERA_RENAISSANCE,Boost,
+BOOST_TECH_MASS_PRODUCTION,Lumber Mill built,20,P,ERA_RENAISSANCE,Boost,Est. cost of a 3rd of a builder
+BOOST_TECH_CARTOGRAPHY,2nd Harbour built,54,P,ERA_RENAISSANCE,Boost,First already covered in chain
+BOOST_CIVIC_MERCANTILISM,Great merchant recruited,60,GMP,ERA_RENAISSANCE,Boost,
+BOOST_TECH_METAL_CASTING,2nd Crossbowman owned,180,P,ERA_RENAISSANCE,Boost,Cost already partially covered by previous nodes in chain
+BOOST_TECH_GUNPOWDER,Armoury built,195,P,ERA_RENAISSANCE,Boost,Est. cost of 1 (all pre-requisites?)
+BOOST_CIVIC_HUMANISM,Great artist recruited,240,GAP,ERA_RENAISSANCE,Boost,
+UNIT_MUSKETMAN,Musketman built,240,P,ERA_RENAISSANCE,Boost,
+BOOST_TECH_SIEGE_TACTICS,2nd Bombard owned,280,P,ERA_RENAISSANCE,Boost,Cost already partially covered by previous nodes in chain
+UNIT_BOMBARD,Bombard built,280,P,ERA_RENAISSANCE,Boost,
+BOOST_TECH_PRINTING,2nd University built,340,P,ERA_RENAISSANCE,Boost,Cost already partially covered by previous nodes in chain
+BOOST_CIVIC_EXPLORATION,2 caravels built,480,P,ERA_RENAISSANCE,Boost,Need 2 caravels

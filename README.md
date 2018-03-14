@@ -1,5 +1,5 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+This is a collection of scripts I created while exploring Python and Data Science using Sid Meier's Civilization 6 as source.
 
 # Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:

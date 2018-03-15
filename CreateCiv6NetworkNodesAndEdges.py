@@ -44,11 +44,12 @@ with open(boostEdgesCSVFilename) as f:
         boostEdgesData.append((row[0], row[1], 'Boost'))
 
 # Merge the raw data into the respective lists
-rawNodesDataList = civicNodesData + techNodesData + districtNodesData + wonderNodesData + buildingNodesData + boostNodesData
+rawNodesDataList = [('SETTLE_FIRST_CITY', 'Settle First City', 0, 'P', 'Ancient Era', 'None')] \
+                 + civicNodesData + techNodesData + districtNodesData + wonderNodesData + buildingNodesData + boostNodesData
 rawEdgesDataList = civicEdgesData + techEdgesData + districtEdgesData + wonderEdgesData + buildingEdgesData + boostEdgesData
 
 # Clean-up data
-# 1. Add missing nodes, especially the "root" node
+# 1. Add missing nodes, especially the "root" node -> Moved to first entry of rawNodesDataList as makes it the proper "root" node!
 # 2. Add missing edges, especially from "root" node to Civic and Technology trees
 # 3. Remove buildings and corresponding edges to simplify. E.g. not Showing government plaza buildings.
 # 4. Replace/Changes edges that confuse things. E.g. You must have campus in order to build a library,
@@ -56,7 +57,8 @@ rawEdgesDataList = civicEdgesData + techEdgesData + districtEdgesData + wonderEd
 # 5. Convert nodesData from 6-tuple to 2-tuple with the 2nd element being a dictionary of attributes - expected format for networkx
 #    Convert edgesData from 3-tuple to 3-tuple with the 3rd element being a dictionary of attributes - expected format for networkx
 # 1.
-rawNodesDataList.append(('SETTLE_FIRST_CITY', 'Settle First City', 0, 'P', 'Ancient Era', 'None'))
+# Moved to rawNodeList creation step above!
+#rawNodesDataList.append(('SETTLE_FIRST_CITY', 'Settle First City', 0, 'P', 'Ancient Era', 'None'))
 # 2.
 rawEdgesDataList.append(('SETTLE_FIRST_CITY', 'CIVIC_CODE_OF_LAWS', 'Civic'))
 rawEdgesDataList.append(('SETTLE_FIRST_CITY', 'TECH_POTTERY', 'Technology'))
@@ -111,6 +113,8 @@ for edge in rawEdgesDataList:
 # 1. Get the categorised lists to apply conditional formatting to nodes and edges
 # 2. Apply attributes based on category to nodes and edges
 # 3. Make style for edges between boosts and associate civic or technologies dashed
+# 4. Add prereq attribute to edges to help with network analysis.
+#    (boosts are (opt)ional and stable -> armory and barracks -> armory are "or" - only need one of the routes...)
 # 1.
 civicNodes = list(x for x in nodesDataList if x[1]['category'] == 'Civic')
 civicEdges = list(x for x in edgesDataList if x[2]['category'] == 'Civic')
@@ -132,8 +136,6 @@ noneEdges = list(x for x in edgesDataList if x[2]['category'] == 'None')
 nodes = []
 for node in noneNodes:
     nodes.append((node[0], {**(node[1]), **u.noneNodeDefaults}))
-for node in boostNodes:
-    nodes.append((node[0], {**(node[1]), **u.boostNodeDefaults}))
 for node in civicNodes:
     nodes.append((node[0], {**(node[1]), **u.civicNodeDefaults}))
 for node in techNodes:
@@ -146,28 +148,36 @@ for node in buildingNodes:
     nodes.append((node[0], {**(node[1]), **u.buildingNodeDefaults}))
 for node in unitNodes:
     nodes.append((node[0], {**(node[1]), **u.unitNodeDefaults}))
+for node in boostNodes:
+    nodes.append((node[0], {**(node[1]), **u.boostNodeDefaults}))
 # 2. for edges
 edges = []
 for edge in noneEdges:
-    edges.append((edge[0], edge[1], {**edge[2], **u.noneEdgeDefaults}))
-for edge in boostEdges:
-    lineStyle = 'solid'
-    if edge[0].startswith('BOOST_') and (edge[1].startswith('CIVIC_') or edge[1].startswith('TECH_')):
-        # 4. Make style for edges between boosts and associate civic or technologies dashed
-        lineStyle = 'dashed'
-    edges.append((edge[0], edge[1], {**edge[2], **u.boostEdgeDefaults, **{ 'style':lineStyle}}))
+    edges.append((edge[0], edge[1], {**edge[2], **u.noneEdgeDefaults, **{'prereq':'and'}}))
 for edge in civicEdges:
-    edges.append((edge[0], edge[1], {**edge[2], **u.civicEdgeDefaults}))
+    edges.append((edge[0], edge[1], {**edge[2], **u.civicEdgeDefaults,**{'prereq':'and'}}))
 for edge in techEdges:
-    edges.append((edge[0], edge[1], {**edge[2], **u.techEdgeDefaults}))
+    edges.append((edge[0], edge[1], {**edge[2], **u.techEdgeDefaults, **{'prereq':'and'}}))
 for edge in districtEdges:
-    edges.append((edge[0], edge[1], {**edge[2], **u.districtEdgeDefaults}))
+    edges.append((edge[0], edge[1], {**edge[2], **u.districtEdgeDefaults, **{'prereq':'and'}}))
 for edge in wonderEdges:
-    edges.append((edge[0], edge[1], {**edge[2], **u.wonderEdgeDefaults}))
+    edges.append((edge[0], edge[1], {**edge[2], **u.wonderEdgeDefaults, **{'prereq':'and'}}))
 for edge in buildingEdges:
-    edges.append((edge[0], edge[1], {**edge[2], **u.buildingEdgeDefaults}))
+    # 4. This is an "or" route, only 1 of them needs to happen, not all
+    if edge[0] == 'BUILDING_STABLE' and edge[1] == 'BUILDING_ARMORY':
+        edges.append((edge[0], edge[1], {**edge[2], **u.buildingEdgeDefaults, **{'prereq':'or', 'label':'or'}}))
+    elif edge[0] == 'BUILDING_BARRACKS' and edge[1] == 'BUILDING_ARMORY':
+        edges.append((edge[0], edge[1], {**edge[2], **u.buildingEdgeDefaults, **{'prereq':'or', 'label':'or'}}))
+    else:
+        edges.append((edge[0], edge[1], {**edge[2], **u.buildingEdgeDefaults, **{'prereq':'and'}}))
 for edge in unitEdges:
     edges.append((edge[0], edge[1], {**edge[2], **u.unitEdgeDefaults}))
+for edge in boostEdges:
+    if edge[0].startswith('BOOST_') and (edge[1].startswith('CIVIC_') or edge[1].startswith('TECH_')):
+        # 3 & 4. Make style for edges between boosts and associate civic or technologies dashed
+        edges.append((edge[0], edge[1], {**edge[2], **u.boostEdgeDefaults, **{ 'style':'dashed', 'prereq':'opt'}}))
+    else:
+        edges.append((edge[0], edge[1], {**edge[2], **u.boostEdgeDefaults, **{'prereq':'and'}}))
 
 # All the data created, save it to disk so we can start playing with graphs and "interesing" stuff
 u.saveCiv6NetworkData(nodes, edges, r'civ6NodesAndEdges.json')

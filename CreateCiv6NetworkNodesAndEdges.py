@@ -110,8 +110,7 @@ for edge in rawEdgesDataList:
 # Convert to final nodes and edges
 # 1. Get the categorised lists to apply conditional formatting to nodes and edges
 # 2. Apply attributes based on category to nodes and edges
-# 3. Add rank so we can use the rank:same, rank:1, rank:2 etc trick in GraphViz
-# 4. Make style for edges between boosts and associate civic or technologies dashed
+# 3. Make style for edges between boosts and associate civic or technologies dashed
 # 1.
 civicNodes = list(x for x in nodesDataList if x[1]['category'] == 'Civic')
 civicEdges = list(x for x in edgesDataList if x[2]['category'] == 'Civic')
@@ -129,34 +128,25 @@ boostNodes = list(x for x in nodesDataList if x[1]['category'] == 'Boost')
 boostEdges = list(x for x in edgesDataList if x[2]['category'] == 'Boost')
 noneNodes = list(x for x in nodesDataList if x[1]['category'] == 'None')
 noneEdges = list(x for x in edgesDataList if x[2]['category'] == 'None')
-# 2 & 3 for nodes
-categorisedAlready = []
+# 2. for nodes
 nodes = []
 for node in noneNodes:
-    nodes.append((node[0], {**(node[1]), **{ 'rank':len(categorisedAlready)}, **u.noneNodeDefaults}))
-    categorisedAlready.append(node[0])
+    nodes.append((node[0], {**(node[1]), **u.noneNodeDefaults}))
 for node in boostNodes:
-    nodes.append((node[0], {**(node[1]), **{ 'rank':len(categorisedAlready)}, **u.boostNodeDefaults}))
-    categorisedAlready.append(node[0])
+    nodes.append((node[0], {**(node[1]), **u.boostNodeDefaults}))
 for node in civicNodes:
-    nodes.append((node[0], {**(node[1]), **{ 'rank':len(categorisedAlready)}, **u.civicNodeDefaults}))
-    categorisedAlready.append(node[0])
+    nodes.append((node[0], {**(node[1]), **u.civicNodeDefaults}))
 for node in techNodes:
-    nodes.append((node[0], {**(node[1]), **{ 'rank':len(categorisedAlready)}, **u.techNodeDefaults}))
-    categorisedAlready.append(node[0])
+    nodes.append((node[0], {**(node[1]), **u.techNodeDefaults}))
 for node in districtNodes:
-    nodes.append((node[0], {**(node[1]), **{ 'rank':len(categorisedAlready)}, **u.districtNodeDefaults}))
-    categorisedAlready.append(node[0])
+    nodes.append((node[0], {**(node[1]), **u.districtNodeDefaults}))
 for node in wonderNodes:
-    nodes.append((node[0], {**(node[1]), **{ 'rank':len(categorisedAlready)}, **u.wonderNodeDefaults}))
-    categorisedAlready.append(node[0])
+    nodes.append((node[0], {**(node[1]), **u.wonderNodeDefaults}))
 for node in buildingNodes:
-    nodes.append((node[0], {**(node[1]), **{ 'rank':len(categorisedAlready)}, **u.buildingNodeDefaults}))
-    categorisedAlready.append(node[0])
+    nodes.append((node[0], {**(node[1]), **u.buildingNodeDefaults}))
 for node in unitNodes:
-    nodes.append((node[0], {**(node[1]), **{ 'rank':len(categorisedAlready)}, **u.unitNodeDefaults}))
-    categorisedAlready.append(node[0])
-# 2. for edges (3. is not applicable)
+    nodes.append((node[0], {**(node[1]), **u.unitNodeDefaults}))
+# 2. for edges
 edges = []
 for edge in noneEdges:
     edges.append((edge[0], edge[1], {**edge[2], **u.noneEdgeDefaults}))

@@ -1,4 +1,4 @@
-strict digraph  {
+strict digraph "Civ 6 R&F Civic, Technology, and Boosts network" {
 SETTLE_FIRST_CITY [label="Settle First City", baseCost=0, costType=P, era="Ancient Era", category=None, color=Black, style=rounded, shape=box];
 CIVIC_CODE_OF_LAWS [label="Code of Laws\n20C", baseCost=20, costType=C, era=Ancient, category=Civic, color="#E800E8", style=rounded, shape=box];
 CIVIC_CRAFTSMANSHIP [label="Craftsmanship\n40C", baseCost=40, costType=C, era=Ancient, category=Civic, color="#E800E8", style=rounded, shape=box];
@@ -687,7 +687,6 @@ DISTRICT_NEIGHBORHOOD -> BOOST_TECH_SANITATION  [category=Boost, color="#9EADBF"
 DISTRICT_AQUEDUCT -> BOOST_TECH_MILITARY_ENGINEERING  [category=Boost, color="#9EADBF", prereq=and];
 DISTRICT_SPACEPORT -> BOOST_CIVIC_SPACE_RACE  [category=Boost, color="#9EADBF", prereq=and];
 DISTRICT_WATER_ENTERTAINMENT_COMPLEX -> BUILDING_FERRIS_WHEEL  [category=Building, color="#C78733", prereq=and];
-BUILDING_COLOSSEUM -> BOOST_CIVIC_DRAMA_POETRY  [category=Boost, color="#9EADBF", prereq=and];
 BUILDING_BARRACKS -> BUILDING_ARMORY  [category=Building, color="#C78733", prereq=or, label=or];
 BUILDING_LIBRARY -> BUILDING_UNIVERSITY  [category=Building, color="#C78733", prereq=and];
 BUILDING_SHRINE -> BUILDING_TEMPLE  [category=Building, color="#C78733", prereq=and];

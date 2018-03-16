@@ -1,0 +1,13 @@
+strict digraph "Civ 6 R&F Civic, Technology, and Boosts network" {
+TECH_ANIMAL_HUSBANDRY [label="Animal Husbandry\n25S", baseCost=25, costType=S, era=Ancient, category=Technology, color="#21BFF7", style=rounded, shape=box, degree=3, betweenness="0.00015275171629025084"];
+BOOST_TECH_ARCHERY [label="Slinger kill made", baseCost=0, costType=P, era=Ancient, category=Boost, color="#9EADBF", style=rounded, shape=box, degree=2, betweenness="0.0018040829245133726"];
+SETTLE_FIRST_CITY [label="Settle First City", baseCost=0, costType=P, era="Ancient Era", category=None, color=Black, style=rounded, shape=box, degree=10, betweenness="0.0"];
+TECH_ARCHERY [label="Archery\n50S", baseCost=50, costType=S, era=Ancient, category=Technology, color="#21BFF7", style=rounded, shape=box, degree=5, betweenness="0.004656178473633767"];
+UNIT_SLINGER [label="Slinger built\n35P", baseCost=35, costType=P, era=Ancient, category=Boost, color="#9EADBF", style=rounded, shape=box, degree=2, betweenness="7.912644405760405e-06"];
+TECH_ANIMAL_HUSBANDRY -> TECH_ARCHERY  [category=Technology, color="#21BFF7", prereq=and];
+BOOST_TECH_ARCHERY -> TECH_ARCHERY  [category=Boost, color="#9EADBF", style=dashed, prereq=opt];
+SETTLE_FIRST_CITY -> TECH_ANIMAL_HUSBANDRY  [category=Technology, color="#21BFF7", prereq=and];
+SETTLE_FIRST_CITY -> UNIT_SLINGER  [category=Boost, color="#9EADBF", prereq=and];
+UNIT_SLINGER -> BOOST_TECH_ARCHERY  [category=Boost, color="#9EADBF", prereq=and];
+graph [rankdir=LR];
+}

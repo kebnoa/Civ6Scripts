@@ -8440,15 +8440,6 @@
       }
     ],
     [
-      "BUILDING_COLOSSEUM",
-      "BOOST_CIVIC_DRAMA_POETRY",
-      {
-        "category": "Boost",
-        "color": "#9EADBF",
-        "prereq": "and"
-      }
-    ],
-    [
       "BUILDING_FACTORY",
       "BOOST_CIVIC_CLASS_STRUGGLE",
       {

@@ -1,0 +1,31 @@
+strict digraph "Civ 6 R&F Civic, Technology, and Boosts network" {
+CIVIC_STATE_WORKFORCE [label="State Workforce\n70C", baseCost=70, costType=C, era=Ancient, category=Civic, color="#E800E8", style=rounded, shape=box, degree=5, betweenness="0.004607011271676842"];
+CIVIC_FOREIGN_TRADE [label="Foreign Trade\n40C", baseCost=40, costType=C, era=Ancient, category=Civic, color="#E800E8", style=rounded, shape=box, degree=5, betweenness="0.003913813622153549"];
+CIVIC_POLITICAL_PHILOSOPHY [label="Political Philosophy\n110C", baseCost=110, costType=C, era=Classical, category=Civic, color="#E800E8", style=rounded, shape=box, degree=6, betweenness="0.006548304191208582"];
+BOOST_CIVIC_EARLY_EMPIRE [label="6 pop reached\n80F", baseCost=80, costType=F, era=Ancient, category=Boost, color="#9EADBF", style=rounded, shape=box, degree=1, betweenness="0.0"];
+BOOST_CIVIC_FOREIGN_TRADE [label="New continent discovered", baseCost=0, costType=P, era=Ancient, category=Boost, color="#9EADBF", style=rounded, shape=box, degree=2, betweenness="0.00019249695812443082"];
+SETTLE_FIRST_CITY [label="Settle First City", baseCost=0, costType=P, era="Ancient Era", category=None, color=Black, style=rounded, shape=box, degree=10, betweenness="0.0"];
+BOOST_CIVIC_STATE_WORKFORCE [label="District built\n54P", baseCost=54, costType=P, era=Ancient, category=Boost, color="#9EADBF", style=rounded, shape=box, degree=1, betweenness="0.0"];
+CIVIC_CODE_OF_LAWS [label="Code of Laws\n20C", baseCost=20, costType=C, era=Ancient, category=Civic, color="#E800E8", style=rounded, shape=box, degree=3, betweenness="0.00041541383130242127"];
+CIVIC_EARLY_EMPIRE [label="Early Empire\n70C", baseCost=70, costType=C, era=Ancient, category=Civic, color="#E800E8", style=rounded, shape=box, degree=4, betweenness="0.0025631373890884547"];
+UNIT_SCOUT [label="Scout built\n30P", baseCost=30, costType=P, era=Ancient, category=Boost, color="#9EADBF", style=rounded, shape=box, degree=5, betweenness="0.0001463839215065675"];
+CIVIC_CRAFTSMANSHIP [label="Craftsmanship\n40C", baseCost=40, costType=C, era=Ancient, category=Civic, color="#E800E8", style=rounded, shape=box, degree=4, betweenness="0.001963918341509732"];
+BOOST_CIVIC_POLITICAL_PHILOSOPHY [label="3 City states found", baseCost=0, costType=P, era=Classical, category=Boost, color="#9EADBF", style=rounded, shape=box, degree=2, betweenness="0.00046570288918761776"];
+BOOST_CIVIC_CRAFTSMANSHIP [label="3 Tiles improved\n60P", baseCost=60, costType=P, era=Ancient, category=Boost, color="#9EADBF", style=rounded, shape=box, degree=1, betweenness="0.0"];
+CIVIC_STATE_WORKFORCE -> CIVIC_POLITICAL_PHILOSOPHY  [category=Civic, color="#E800E8", prereq=and];
+CIVIC_FOREIGN_TRADE -> CIVIC_EARLY_EMPIRE  [category=Civic, color="#E800E8", prereq=and];
+BOOST_CIVIC_EARLY_EMPIRE -> CIVIC_EARLY_EMPIRE  [category=Boost, color="#9EADBF", style=dashed, prereq=opt];
+BOOST_CIVIC_FOREIGN_TRADE -> CIVIC_FOREIGN_TRADE  [category=Boost, color="#9EADBF", style=dashed, prereq=opt];
+SETTLE_FIRST_CITY -> CIVIC_CODE_OF_LAWS  [category=Civic, color="#E800E8", prereq=and];
+SETTLE_FIRST_CITY -> UNIT_SCOUT  [category=Boost, color="#9EADBF", prereq=and];
+BOOST_CIVIC_STATE_WORKFORCE -> CIVIC_STATE_WORKFORCE  [category=Boost, color="#9EADBF", style=dashed, prereq=opt];
+CIVIC_CODE_OF_LAWS -> CIVIC_CRAFTSMANSHIP  [category=Civic, color="#E800E8", prereq=and];
+CIVIC_CODE_OF_LAWS -> CIVIC_FOREIGN_TRADE  [category=Civic, color="#E800E8", prereq=and];
+CIVIC_EARLY_EMPIRE -> CIVIC_POLITICAL_PHILOSOPHY  [category=Civic, color="#E800E8", prereq=and];
+UNIT_SCOUT -> BOOST_CIVIC_FOREIGN_TRADE  [category=Boost, color="#9EADBF", prereq=and];
+UNIT_SCOUT -> BOOST_CIVIC_POLITICAL_PHILOSOPHY  [category=Boost, color="#9EADBF", prereq=and];
+CIVIC_CRAFTSMANSHIP -> CIVIC_STATE_WORKFORCE  [category=Civic, color="#E800E8", prereq=and];
+BOOST_CIVIC_POLITICAL_PHILOSOPHY -> CIVIC_POLITICAL_PHILOSOPHY  [category=Boost, color="#9EADBF", style=dashed, prereq=opt];
+BOOST_CIVIC_CRAFTSMANSHIP -> CIVIC_CRAFTSMANSHIP  [category=Boost, color="#9EADBF", style=dashed, prereq=opt];
+graph [rankdir=LR];
+}
